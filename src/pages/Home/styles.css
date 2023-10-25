@@ -1,4 +1,12 @@
+.loading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    margin-top: 14px;
+    color: #1E1E1E;
+
+}
 
 .movies-list{
     max-width: 800px;
