@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 import { useState } from "react";
 
+import { toast } from "react-toastify";
+
+
 import './styles.css';
 
 const Favorites = () => {
@@ -13,12 +16,12 @@ const Favorites = () => {
     }
 
     const deleteMovie = (id) => {
-        alert(`Excluindo filme: ${id}`)
         let filter = favorites.filter((item)=>{
             return item.id !== id
         })
         setFavorites(filter)
         localStorage.setItem('@geekMovies', JSON.stringify(filter))
+        toast.success('Filme removido com sucesso!');
     }
 
     useEffect(()=>{
